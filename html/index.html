@@ -1,10 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
         <title>Idiotic Movie Trend</title>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
+        <div class="container">
+            <h1>Sean and Kayliegh's Idiotic Movie Trends</h1>
+            <p>Enter a new movie</p>
 
+            <div class="dropdown" style="margin-top:2%">
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" data-target="#myModal">User
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sean</a></li>
+                        <li><a href="#">Kayliegh</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <br />
+
+            <form>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-film"></i></span>
+                    <input id="msg" type="text" class="form-control" name="msg" placeholder="Movie Title">
+                </div>
+            </form>
+            <br />
+
+            <form class="form-inline" onsubmit="openModal()" id="submitNewMovie">
+                <input type="submit" class="btn btn-warning" value="Add Movie">
+            </form>
+
+            <div class="modal fade" tabindex="-1" role="dialog" id="submitMovieModal">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title">Adding New Movie</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>This is your movie</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
+
+    <script src="../js/index.js"></script>
 </html>
